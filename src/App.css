@@ -11,11 +11,11 @@
     padding: 20px;
     border-radius: 10px;
     width: 400px;
-    max-width: 90%;
+    max-width: 90%; /* responsive banane ke liye*/
 }
 
 footer {
-    position: fixed;
+    position: fixed; 
     bottom: 0;
 }
 
@@ -94,7 +94,7 @@ footer a:hover {
     grid-template-columns: 230px 1fr;
 }
 
-.aside {
+.aside { /*buttons ko neeche krne ke liye flex:column kr diya*/
     background: #1c1e29;
     padding: 16px;
     color: #fff;
@@ -102,7 +102,7 @@ footer a:hover {
     flex-direction: column;
 }
 .asideInner {
-    flex: 1;
+    flex: 1; /*ye grow krta hai apne region ko jitna bhi available space hai waha tak chala jayega*/
 }
 
 .clientsList {
@@ -115,7 +115,7 @@ footer a:hover {
 .client {
     display: flex;
     align-items: center;
-    flex-direction: column;
+    flex-direction: column;/*taaki client name avatar ke neeche aa jaaye*/
     font-weight: bold;
 }
 .userName {
@@ -136,7 +136,7 @@ footer a:hover {
     margin-top: 20px;
 }
 .CodeMirror {
-    min-height: calc(100vh - 20px);
+    min-height: calc(100vh - 20px);/*-20px kyu ki scroll ho rha tha, padding spacing ke kaaran*/
     font-size: 20px;
     line-height: 1.6;
     padding-top: 20px;

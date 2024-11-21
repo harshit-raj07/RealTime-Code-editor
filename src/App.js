@@ -13,7 +13,7 @@ function App() {
                     toastOptions={{
                         success: {
                             theme: {
-                                primary: '#4aed88',
+                                primary: '#4aed88', 
                             },
                         },
                     }}
@@ -21,9 +21,9 @@ function App() {
             </div>
             <BrowserRouter>
                 <Routes>
-                    <Route path="/" element={<Home />}></Route>
+                    <Route path="/" element={<Home />}></Route> {/*home page render hoga*/}
                     <Route
-                        path="/editor/:roomId"
+                        path="/editor/:roomId" /*dynamic likhna hai to : use krenge*/
                         element={<EditorPage />}
                     ></Route>
                 </Routes>

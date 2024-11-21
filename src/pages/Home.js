@@ -6,10 +6,10 @@ import { useNavigate } from 'react-router-dom';
 const Home = () => {
     const navigate = useNavigate();
 
-    const [roomId, setRoomId] = useState('');
+    const [roomId, setRoomId] = useState('');/*jo new id create ho raha usko room id me set karna hoga*/
     const [username, setUsername] = useState('');
     const createNewRoom = (e) => {
-        e.preventDefault();
+        e.preventDefault(); /*page refresh na ho*/
         const id = uuidV4();
         setRoomId(id);
         toast.success('Created a new room');
@@ -24,7 +24,7 @@ const Home = () => {
         // Redirect
         navigate(`/editor/${roomId}`, {
             state: {
-                username,
+                username,/*ek page se dusre page pe data pass krne ka option hota useNavigate hook me*/
             },
         });
     };
@@ -48,7 +48,7 @@ const Home = () => {
                         type="text"
                         className="inputBox"
                         placeholder="ROOM ID"
-                        onChange={(e) => setRoomId(e.target.value)}
+                        onChange={(e) => setRoomId(e.target.value)}/*agar koi manually room id daale tab bhi wo set ho jaaye*/
                         value={roomId}
                         onKeyUp={handleInputEnter}
                     />
